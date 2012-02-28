@@ -76,7 +76,7 @@ end
 slider_js_output = OUTPUT+"/slider.js"
 slider_min_js_output = OUTPUT+"/slider.min.js"
 
-outputs = ["examples/flickr-stream/public/sliderjs/", "examples/modules-inspector/"]
+outputs = ["examples/flickr-stream/public/sliderjs/", "examples/alpha/"]
 
 def slider_less_files
   Dir['src/slider.less', 'src/modules/*.less', 'src/themes/*.less', 'src/transitions/css/*.less']
@@ -173,7 +173,7 @@ task :outputs do
     mkdir_p dirpath
     cp_r OUTPUT, dirpath
   }
-  File.open("examples/modules-inspector/THEMES.js", "w+") do |file|
+  File.open("examples/alpha/THEMES.js", "w+") do |file|
     file.write 'THEMES = ["'+slider_themes.join('", "')+'"];'+"\n"
   end
 
