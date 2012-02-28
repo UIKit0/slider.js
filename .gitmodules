@@ -1,0 +1,3 @@
+[submodule "src/SelectorTemplating"]
+	path = src/SelectorTemplating
+	url = git@gist.github.com:1731611.git
