@@ -17,19 +17,15 @@ sliderjs.modules.register("transition", function (sandbox, $) {
     return !supported || supported();
   }
 
-  function onTransitionMode (o) {
-    // TODO
-  }
-
   return {
+    def: fallback,
     init: function () {
       this.change(sandbox.value());
-      sandbox.on("transitionMode", onTransitionMode);
     },
     destroy: function () {
-      sandbox.off("transitionMode", onTransitionMode);
     },
     fix: function (value, old) {
+      if (!value) return value;
       if (value instanceof Array) {
         for (var i=0; i<value.length; ++i)
           if(transitionSupported(value[i])) 

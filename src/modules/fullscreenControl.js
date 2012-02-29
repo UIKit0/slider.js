@@ -5,7 +5,6 @@
  *
  * <renaudeau.gaetan@gmail.com> - 2012
  */
-// TODO merge with fullscreen???
 sliderjs.modules.register("fullscreenControl", function (sandbox, $) {
   
   var defaultValue = {

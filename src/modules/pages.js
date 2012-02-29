@@ -5,7 +5,6 @@
  *
  * <renaudeau.gaetan@gmail.com> - 2012
  */
-// TODO : split in different components
 sliderjs.modules.register("pages", function (sandbox, $) {
   var node, pages,
   defaultValue = {

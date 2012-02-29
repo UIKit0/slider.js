@@ -1,5 +1,4 @@
 //~~~ canvas transition
-// TODO : clean , reduce the code, polish ?
 sliderjs.modules.register("canvasTransition", function (sandbox, $) {
   var mode,
       container,

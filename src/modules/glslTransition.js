@@ -91,7 +91,6 @@ sliderjs.modules.register("glslTransition", function (sandbox, $) {
        x2, y2]), gl.STATIC_DRAW);
   }
 
-  // TODO : fix with transitions()
   function loadTransition (transition) {
     if(!transition) return;
     var w = canvas.width, h = canvas.height;
