@@ -37,6 +37,7 @@ sliderjs.modules.register("slides", function (sandbox, $) {
 
   function onTemplated (n) {
     node = n[0];
+    if (!node) return;
     nodes = $.find(node, ".slide");
     syncSlide (sandbox.opt("slide"));
     syncHeight (sandbox.opt("height"));
@@ -52,6 +53,7 @@ sliderjs.modules.register("slides", function (sandbox, $) {
 
   // TODO : clean these ... currentSlideLoaded and firstSlideLoaded should be removed from here
   function load (slides) {
+    if (!slides) return;
     var state = { success: 0, error: 0, abort: 0, total: slides.length, sum: null };
     var handle = function (e, i, img, id) {
       if(id !== loading) return; // if slides has changed since, don't trigger events anymore

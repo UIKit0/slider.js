@@ -20,6 +20,7 @@ sliderjs.modules.register("pages", function (sandbox, $) {
 
   function onTemplated (nodes) {
     node = nodes[0];
+    if (!node) return;
     pages = $.find(node, ".page");
     $.each(pages, function (n, i) {
       var slide = i;

@@ -34,6 +34,7 @@ sliderjs.modules.register("playPauseControl", function (sandbox, $) {
     
   function onTemplated (nodes, container) {
     node = nodes[0];
+    if (!node) return;
     syncButton();
     $.bind(node, "click", function (e) {
       e.preventDefault();

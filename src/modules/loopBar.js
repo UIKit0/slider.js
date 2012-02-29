@@ -25,6 +25,7 @@ sliderjs.modules.register("loopBar", function (sandbox, $) {
 
   function onTemplated (nodes, container) {
     node = nodes[0];
+    if (!node) return;
     inner = $.find(node, ".loopBar-inner")[0];
     render();
   }

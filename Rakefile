@@ -76,7 +76,7 @@ end
 slider_js_output = OUTPUT+"/slider.js"
 slider_min_js_output = OUTPUT+"/slider.min.js"
 
-outputs = ["examples/flickr-stream/public/sliderjs/", "examples/alpha/"]
+outputs = ["test/", "examples/flickr-stream/public/sliderjs/", "examples/alpha/"]
 
 def slider_less_files
   Dir['src/slider.less', 'src/modules/*.less', 'src/themes/*.less', 'src/transitions/css/*.less']

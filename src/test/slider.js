@@ -28,13 +28,13 @@ test("modules are loosely coupled", function () {
 test("modules start / stop", function () {
   var slider = newSlider({ modules: [] });
   $.each(sliderjs.modules.list(), function (i, module) {
-    slider.start(module);
+    slider.modules.start(module);
   });
-  ok(slider.modules.list() > 0, "more than 0 modules are loaded");
+  ok(slider.modules.list().length > 0, "more than 0 modules are loaded");
   $.each(sliderjs.modules.list(), function (i, module) {
-    slider.stop(module);
+    slider.modules.stop(module);
   });
-  ok(slider.modules.list() == 0, "0 modules are loaded");
+  ok(slider.modules.list().length == 0, "0 modules are loaded");
 });
 
 

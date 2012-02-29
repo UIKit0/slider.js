@@ -15,6 +15,7 @@ sliderjs.modules.register("fullscreen", function (sandbox, $) {
   }
 
   function setFullscreen (on) {
+    if (!node) return;
     if(on) {
       oldW = sandbox.opt("width");
       oldH = sandbox.opt("height");

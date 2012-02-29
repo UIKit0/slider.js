@@ -19,6 +19,7 @@ sliderjs.modules.register("nextControl", function (sandbox, $) {
 
   function onTemplated (nodes, container) {
     var node = nodes[0];
+    if (!node) return;
     $.bind(node, "click", function (e) {
       e.preventDefault();
       sandbox.opt("slide", "next").trigger("pagesClicked");
